@@ -33,9 +33,7 @@ An Open Source Desktop pet based on the raspberry pi pico and micropython
     * `imu.py`
     * `ssd1306.py`
     * `vector3d.py`
-    * `button.py` (Note: This file seems to be used by `V2/main.py` but wasn't provided in the upload. You'll need a Button class handling debounce/long press)
-    * (Optional) `fileUpload.py`
-    * (Optional) `Web/index.html`, `Web/style.css`
+    * `button.py`
 * Animation/Emotion Image Files (`.bmp` format)
 
 ## Installation & Setup
@@ -71,9 +69,6 @@ An Open Source Desktop pet based on the raspberry pi pico and micropython
     * **Idle Behavior:** The pet will show idle animations and blink occasionally. Its mood will change based on its care stats and inactivity time.
 4.  **(Optional) File Upload:** If `fileUpload.py` is running, navigate to the Pico W's IP address in a web browser to upload new animation folders/files.
 
-## File Structure (V2 Example)
-
-/├── main.py             # Main application logic (V2)├── robo_eyes.py        # Handles drawing eyes/animations (V2)├── care_system.py      # Manages pet stats (V2)├── Emotions.py         # Loads animation frames/images (V2)├── button.py           # Button handling class (Needs to be created)├── imu.py              # MPU6050 driver├── ssd1306.py          # OLED driver├── vector3d.py         # Helper for IMU├── fileUpload.py       # (Optional) Web server for uploads│├── Animation/          # Directory for animation frames (V2)│   ├── BlinkNeutral/│   │   ├── 0001.bmp│   │   └── ...│   ├── Glee/│   │   └── *.bmp│   └── ... (Other animation folders like SadDown, HeartEyes, etc.)│├── EmotionsBMP/        # Directory for static emotion images (if used)│   ├── Neutral.bmp│   └── ...│└── Web/                # (Optional) Files for web uploader├── index.html└── style.css
 ## License
 
 Based on the included `imu.py` driver, this project is likely intended to be under the **MIT License**. Please confirm and add a LICENSE file if desired.
