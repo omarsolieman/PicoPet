@@ -1,3 +1,23 @@
+def Blink():
+    frames = [load_image(f'Animation/BlinkNeutral/{i:04d}.bmp') for i in range(1, 14)]
+    return frames
+
+def Glee():
+    frames = [load_image(f'Animation/Glee/{i:04d}.bmp') for i in range(1, 15)]
+    return frames
+
+def SadDown():
+    frames = [load_image(f'Animation/SadDown/{i:04d}.bmp') for i in range(1, 15)]
+    return frames
+
+def HeartEyes():
+    frames = [load_image(f'Animation/HeartEyes/{i:04d}.bmp') for i in range(1, 22)]
+    return frames
+
+def Mad():
+    frames = [load_image(f'Animation/Mad/{i:04d}.bmp') for i in range(1, 18)]
+    return frames
+
 def load_image(filename):
     with open(filename, 'rb') as f:
         img = bytearray(f.read())
@@ -8,14 +28,8 @@ def load_image(filename):
 def Happy():
     return load_image('EmotionsBMP/Happy.bmp')
 
-def Glee():
-    return load_image('EmotionsBMP/Glee.bmp')
-
-def SadDown():
-    return load_image('EmotionsBMP/SadDown.bmp')
-
 def Neutral():
-    return load_image('EmotionsBMP/Neutral.bmp')
+    return load_image('EmotionsBMP/0001.bmp')
 
 def BlinkDown():
     return load_image('EmotionsBMP/BlinkDown.bmp')
@@ -39,5 +53,5 @@ def Unimpressed():
     return load_image('EmotionsBMP/Unimpressed.bmp')
 
 def Worried():
-    return load_image('EmotionsBMP/Worried.bmp')
+    return load_image('EmotionsBMP/Skeptic.bmp')
 
